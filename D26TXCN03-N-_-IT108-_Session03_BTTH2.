@@ -1,0 +1,12 @@
+Báo cáo phân tích ngắn
+ Lỗi đổi máy : Đường dẫn tuyệt đối cố định tên ổ đĩa và tên cơ điện máy bạn  Khi sang máy bạn thântên thư mục hệ thống thay đổi nên Python không tìm thấy file.
+ Luồng IPO gây treo RAM 98%:
+	 Input: Máy đọc file ảnh logo từ ổ cứng 
+	 Process: Python giải nén ảnh thành ma trận điểm ảnh nặng để xử lý trên RAM. Do bạn nạp quá nhiều ảnh lớn cùng lúc hoặc code bị vòng lặp vô hạn, RAM bị nuốt sạch 98% gây đứng máy.
+	 Output: Giao diện bị đơ, không hiển thị được logo.
+Giải pháp kỹ thuật :
+ Đổi sang đường dẫn tương đối
+2. 3 bước giảm lag cấp tốc
+ Bước 1: Vào Task Manager -> Chuột phải vào Python -> Chọn End Task để giải phóng RAM ngay lập tức.
+ Bước 2: Vào thư mục assets hạ độ phân giải và nén dung lượng ảnh logo xuống mức thấp nhất (vài KB).
+ Bước 3: Sửa code: Chỉ khi nào màn hình cần dùng mới nạp ảnh, tuyệt đối không nạp ảnh trong vòng lặp vô hạn và nhớ đóng file sau khi đọc.
