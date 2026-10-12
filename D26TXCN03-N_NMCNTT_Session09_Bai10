@@ -1,0 +1,109 @@
+Phần 1: Phân tích & Đề xuất (Đa giải pháp)
+1. Phân tích yêu cầu bài toán
+Đầu vào (User Input):
+
+Người dùng là sinh viên năm nhất ngành Công nghệ Thông tin, mới bắt đầu làm quen với lập trình và chưa có nhiều kiến thức nền tảng kỹ thuật.
+
+Mong muốn hiểu rõ bản chất cốt lõi của một khái niệm công nghệ (trong ngữ cảnh đề bài là Markdown Parser).
+
+Đầu ra (AI Output cần đạt được):
+
+Giải thích dễ hiểu, trực quan, phù hợp với trình độ người mới.
+
+Có giới hạn cấu trúc hoặc độ dài rõ ràng, loại bỏ các thuật ngữ rườm rà hoặc mã nguồn không cần thiết nếu được yêu cầu.
+
+2. Phân tích ưu và nhược điểm của hai chiến lược Prompt
+Chiến lược A (Văn xuôi thuần túy)
+Ưu điểm:
+
+Tự nhiên, dễ viết: Gần gũi với cách giao tiếp hằng ngày của con người, không cần nhớ cú pháp phức tạp.
+
+Tiết kiệm token đầu vào (Input tokens): Câu hỏi ngắn gọn, ít ký tự thừa.
+
+Nhược điểm:
+
+Thiếu tính cấu trúc chặt chẽ: AI dễ lan man, trả lời dài dòng hoặc đưa ra các thuật ngữ vượt quá tầm hiểu biết của sinh viên năm nhất.
+
+Khó kiểm soát tham số đầu ra: Khó ép AI tuân thủ đúng giới hạn từ, định dạng ví dụ hoặc loại bỏ hoàn toàn mã lập trình.
+
+Khó tái sử dụng: Khi đổi sang khái niệm khác, phải viết lại toàn bộ câu văn từ đầu.
+
+Chiến lược B (Cấu trúc Markdown 3 phần)
+Ưu điểm:
+
+Kiểm soát đầu ra tuyệt đối: Phân tách rõ ràng ngữ cảnh, khái niệm và ràng buộc giúp AI tập trung đúng trọng tâm, hạn chế tối đa thông tin rác.
+
+Dễ tái sử dụng: Chỉ cần thay đổi phần tên khái niệm để dùng lại khung Prompt cho hàng loạt câu hỏi khác.
+
+Tối ưu hóa cho AI (Prompt Engineering): Tận dụng tốt các thẻ tiêu đề Markdown để AI phân chia luồng xử lý thông tin mạch lạc.
+
+Nhược điểm:
+
+Tốn nhiều token đầu vào hơn: Số lượng từ khóa và cú pháp Markdown nhiều hơn.
+
+Yêu cầu làm quen ban đầu: Người dùng phải nắm được cách cấu trúc khung Prompt thay vì chỉ gõ câu hỏi bản năng.
+
+Phần 2: So sánh & Lựa chọn
+3. Đánh giá chi tiết 4 tiêu chí nghiệp vụ
+Độ chính xác:
+
+Chiến lược A mang lại độ chính xác thấp đến trung bình do AI dễ bỏ sót các yêu cầu tinh tế về trình độ người hỏi.
+
+Chiến lược B mang lại độ chính xác cao nhờ phân tách rõ ràng bối cảnh và ràng buộc, giúp AI hiểu đúng trọng tâm.
+
+Tiêu thụ Token:
+
+Chiến lược A tốn ít token hơn vì có ít ký tự và không dùng thẻ định dạng.
+
+Chiến lược B tốn nhiều token đầu vào hơn do sử dụng thêm cú pháp tiêu đề Markdown.
+
+Khả năng tái sử dụng:
+
+Chiến lược A có khả năng tái sử dụng thấp (phải viết lại câu văn mới hoàn toàn cho mỗi chủ đề).
+
+Chiến lược B có khả năng tái sử dụng cao (chỉ cần thay đổi nội dung ở phần khái niệm).
+
+Dễ học cho người mới:
+
+Chiến lược A rất dễ học và áp dụng ngay lập tức mà không cần học kỹ thuật Prompt.
+
+Chiến lược B ở mức trung bình, yêu cầu người dùng cần làm quen với cấu trúc bố cục Markdown.
+
+4. Chốt lựa chọn & Lý giải bối cảnh áp dụng
+Khi nào nên dùng Chiến lược A?
+
+Phù hợp cho các câu hỏi nhanh, mang tính tra cứu thông tin đời thường, trò chuyện thông thường hoặc khi không có yêu cầu khắt khe về định dạng câu trả lời của AI.
+
+Khi nào nên dùng Chiến lược B?
+
+Được khuyên dùng cho học tập và nghiên cứu kỹ thuật. Đặc biệt tối ưu khi sinh viên cần AI đóng vai trò gia sư giải thích các khái niệm phức tạp, cần giới hạn độ dài, loại bỏ code rườm rà hoặc yêu cầu ví dụ thực tế cụ thể.
+
+Phần 3: Thiết kế & Triển khai
+5. Prompt mẫu chuẩn áp dụng cho sinh viên năm 1 (Hỏi về khái niệm "Token")
+Markdown
+## Bối cảnh
+Tôi là sinh viên năm 1 ngành CNTT, mới bắt đầu làm quen với công nghệ và trí tuệ nhân tạo, chưa có nền tảng lập trình sâu.
+
+## Khái niệm cần giải thích
+Token (thuật ngữ trong xử lý ngôn ngữ tự nhiên và AI từ Lesson 01)
+
+## Yêu cầu
+- Giải thích bằng ngôn ngữ đời thường, dễ hiểu, có thể so sánh với các vật dụng hoặc tình huống quen thuộc trong đời sống.
+- Giới hạn độ dài trong khoảng 100-150 từ.
+- Cho ví dụ cụ thể về cách AI đếm hoặc chia tách token từ một từ tiếng Việt hoặc tiếng Anh ngắn gọn.
+
+## Không cần
+- Giải thích sâu về các thuật toán mã hóa phức tạp (như Byte-Pair Encoding).
+- Công thức toán học hay mã nguồn lập trình.
+6. Trả lời các bẫy dữ liệu
+Bẫy 1: Nếu người dùng dùng chiến lược B nhưng đặt nội dung vào sai phần (ví dụ: đưa yêu cầu về độ dài vào phần ## Bối cảnh), AI sẽ hiểu như thế nào và ảnh hưởng ra sao?
+
+Phân tích: Các mô hình ngôn ngữ lớn (LLM) đọc cấu trúc tiêu đề (##) để phân loại chức năng thông tin. Nếu đưa yêu cầu ràng buộc độ dài vào phần Bối cảnh, AI sẽ xem đó là thông tin mô tả tình huống của người dùng thay vì là mệnh lệnh bắt buộc phải tuân thủ.
+
+Ảnh hưởng: AI có thể vẫn trả lời đúng chủ đề nhờ bối cảnh, nhưng rất dễ vi phạm ràng buộc về định dạng (ví dụ: viết quá dài, dùng từ ngữ chuyên sâu hoặc quên không đưa ra ví dụ), làm giảm chất lượng đầu ra.
+
+Bẫy 2: Chiến lược A chiếm ít token hơn, vậy khi nào nên ưu tiên chiến lược A thay vì B?
+
+Phân tích: Mặc dù chiến lược A tiết kiệm token đầu vào, việc tối ưu token ở phần câu hỏi không có ý nghĩa lớn nếu AI trả lời sai hướng và người dùng phải gõ lại nhiều lần (gây tốn tổng số token tích lũy cho cả đoạn chat).
+
+Nên ưu tiên chiến lược A khi: Cần tương tác nhanh, hỏi các câu hỏi đơn chiều, mang tính tra cứu từ điển nhanh gọn hoặc khi sử dụng các hệ thống có giới hạn nghiêm ngặt về số ký tự đầu vào mà không đòi hỏi độ chính xác cấu trúc cao từ phía AI.
