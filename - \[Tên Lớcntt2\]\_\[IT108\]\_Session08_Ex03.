@@ -1,0 +1,73 @@
+1. Báo cáo phân tích (I/O)
+Input (Văn bản thô):
+
+Các ký tự Markdown thông thường như cú pháp in đậm, in nghiêng, tiêu đề (#), danh sách (-, *), ký tự đặc biệt (dùng ký tự escape \ như \*, \#).
+
+Khối mã lệnh viết bằng Python chưa được định dạng màu sắc.
+
+Các dòng văn bản mô tả quy trình cài đặt VS Code, biến môi trường (ví dụ: PATH, VSCODE_PATH).
+
+Output (Giao diện render trên StackEdit/GitHub):
+
+Hiển thị trực quan tiêu đề phân cấp rõ ràng.
+
+Khối mã nguồn Python (python) có bật tính năng tô sáng cú pháp (Syntax Highlighting).
+
+Bảng so sánh trực quan giữa StackEdit và VS Code.
+
+Danh sách công việc (Task List) có thể tương tác (tích chọn hoàn thành).
+
+2. Source Code (README.md hoặc file .md)
+Bạn hãy tạo một file có tên README.md (hoặc đặt tên theo yêu cầu repo D26TXCN03-N_IT108_Session08_Ex03) và dán nội dung sau vào:
+
+Markdown
+# Hướng dẫn Onboarding Cài đặt VS Code cho Lập trình viên Mới
+
+Tài liệu này hướng dẫn các bước thiết lập môi trường làm việc ban đầu và cấu hình các extension cơ bản trên **VS Code**.
+
+## 1. Cấu hình biến môi trường cơ bản
+Trong quá trình cấu hình, bạn cần chú ý các biến hệ thống quan trọng như biến đường dẫn `PATH` hoặc biến cục bộ `VSCODE_PATH` để hệ điều hành nhận diện lệnh nhanh chóng. Tránh sử dụng nhầm các ký tự đặc biệt như dấu sao (\*) hay dấu thăng (\#) nếu muốn hiển thị chúng dưới dạng văn bản thuần túy (ví dụ: viết là \*) thay vì định dạng Markdown.
+
+## 2. Đoạn mã Python mẫu kiểm tra môi trường
+Dưới đây là đoạn code Python giúp kiểm tra phiên bản hệ thống và đường dẫn hiện tại:
+
+```python
+import sys
+import os
+
+def check_environment():
+    print("--- KIỂM TRA MÔI TRƯỜNG LÀM VIỆC ---")
+    print(f"Python Version: {sys.version}")
+    print(f"Current Working Directory: {os.getcwd()}")
+    
+    if sys.version_info >= (3, 8):
+        print("Trạng thái: Đạt chuẩn yêu cầu phát triển!")
+    else:
+        print("Cảnh báo: Vui lòng nâng cấp phiên bản Python.")
+
+if __name__ == "__main__":
+    check_environment()
+3. So sánh StackEdit và VS Code
+Tiêu chí	StackEdit	VS Code
+Mục đích chính	Viết tài liệu, ghi chú, chỉnh sửa Markdown trực tuyến	Môi trường phát triển tích hợp (IDE) đa năng cho lập trình
+Hỗ trợ Code	Hỗ trợ xem trước Markdown, chia sẻ nhanh	Tích hợp Terminal, Git, Debugger và hỗ trợ Syntax Highlighting mạnh mẽ
+Khả năng mở rộng	Cơ bản, tập trung vào văn bản	Rất lớn với hệ thống Extension phong phú
+4. Task List kiểm tra tiến độ cài đặt
+[x] Tải và cài đặt thành công Visual Studio Code
+
+[x] Cài đặt các Extension cơ bản (Python, Prettier, GitLens)
+
+[x] Cấu hình phím tắt (Keyboard Shortcuts) cá nhân hóa
+
+[ ] Đồng bộ hóa cấu hình qua tài khoản GitHub/Microsoft
+
+[ ] Hoàn thành bài tập thực hành trên lớp
+
+
+---
+
+ 3. Hướng dẫn nộp bài
+1. Tạo một Repository công khai (Public) trên GitHub với tên theo quy định (hoặc dùng Google Docs/Drive nếu chọn hình thức khác).
+2. Đẩy file `.md` trên vào kho lưu trữ.
+3. Sao chép đường dẫn (Link) repo GitHub hoặc link Google Docs/Drive đã bật quyền xem (**"Bất kỳ ai có link đều xem được"**).
+4. Dán link vào ô nộp bài tại giao diện LMS Portal và nhấn **[Nộp bài tập]**.
