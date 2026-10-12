@@ -1,0 +1,58 @@
+1. Nội dung file README.md (Gộp Phần 1 + Phần 2)Markdown# 🚀 SmartCampus 
+
+Ứng dụng di động giúp **sinh viên PTIT** tra cứu lịch học, phòng trống và nhận _thông báo_ mới nhất từ nhà trường.
+
+- Tính năng chính:
+  - Tra cứu lịch học theo mã sinh viên (`N26DTCN051`...)
+  - Xem danh sách phòng trống theo tòa nhà
+    - Cập nhật theo thời gian thực
+    - Hỗ trợ lọc nhanh khu vực A, B, C
+
+[Trang chủ CLB Lập trình PTIT](https://clblaptrinh.ptit.edu.vn)
+
+![Logo SmartCampus](https://images.unsplash.com/photo-1523050854058-8df90110c9f1)
+
+> ⚠️ **Cảnh báo:** Dự án hiện đang trong giai đoạn phát triển, vui lòng không sử dụng cho mục đích chính thức trên hệ thống trường.
+
+---
+
+## ⚙️ Phần Kỹ Thuật
+
+### 1. Cài đặt dự án
+```bash
+git clone [https://github.com/clb-lap-trinh/smartcampus.git](https://github.com/clb-lap-trinh/smartcampus.git)
+npm install
+npm start
+2. Trạng thái phát triển[x] Tra cứu lịch học theo mã sinh viên[x] Xem danh sách phòng trống theo tòa nhà[ ] Thông báo đẩy (push notification)[ ] Đăng nhập bằng tài khoản trường3. Thư viện sử dụngThư việnPhiên bảnMục đíchReact Native0.74Xây giao diện đa nền tảng iOS/AndroidAxios1.6Gọi API lấy dữ liệu lịch học4. Ghi chú cú pháp EscapeĐể hiển thị ký tự đặc biệt như dấu thăng mà không bị tính là Heading, ta dùng ký tự escape như sau: # Tiêu đề giả lập.
+---
+
+## 2. Nội dung file `api_giai_thich.md` (Phần 3)
+
+```markdown
+## Tôi là ai / Bối cảnh
+## Chủ đề / Nội dung cần xử lý
+## Yêu cầu
+- Giải thích khái niệm API là gì bằng ví dụ thực tế, dễ hiểu đối với sinh viên năm nhất công nghệ thông tin.
+- Nêu rõ các thành phần cơ bản của API (Request và Response).
+- Trình bày ngắn gọn lợi ích khi sử dụng API trong phát triển ứng dụng di động.
+## Không cần
+- Không đi sâu vào các chuẩn thiết kế phức tạp như GraphQL hay gRPC.
+
+---
+
+### Câu trả lời từ AI (đã tóm tắt và lưu lại):
+API (Application Programming Interface) hoạt động giống như một "người phục vụ" trong nhà hàng: bạn (client) gọi món qua menu, nhân viên chuyển yêu cầu đó xuống nhà bếp (server), sau đó mang món ăn đã chế biến xong trả về cho bạn. Trong lập trình, API giúp các phần mềm khác nhau giao tiếp và trao đổi dữ liệu với nhau một cách mượt mà.
+3. Nội dung phần bẫy cú pháp file on_tap.md (Phần 4)Markdown## Giải đáp Bẫy cú pháp (Phần 4)
+
+### 1. Chỉ ra chính xác 2 lỗi cú pháp:
+- **Lỗi 1 (Bảng Table):** Thiếu dòng phân cách giữa tiêu đề bảng và nội dung (`| --- | --- |`). Do đó Markdown không hiểu đây là bảng và hiển thị dạng text thường.
+- **Lỗi 2 (Task List):** Thiếu dấu cách (` `) giữa dấu trừ và ngoặc vuông (viết sai thành `-[x]`, đúng chuẩn phải là `- [x]` có khoảng trắng) nên hệ thống không nhận diện được danh sách công việc.
+
+### 2. Viết lại đoạn code đã sửa đúng chuẩn:
+| Tính năng | Trạng thái |
+| :--- | :--- |
+| Tra cứu lịch học | Xong |
+| Push notification | Đang làm |
+
+- [x] Tra cứu lịch học
+- [ ] Push notification
